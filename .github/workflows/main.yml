@@ -15,6 +15,6 @@ jobs:
         run: |
              ls
              pwd
-             source ./env-test.sh
+             source ./env_test.sh
         env:
           FOO_ROOT: ${{ secrets.demo }}
