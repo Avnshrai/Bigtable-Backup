@@ -15,8 +15,6 @@ jobs:
         run: |
              ls
              pwd
-             cd ..
-             pwd
-             ./env-test.sh
+             bash env-test.sh
         env:
           FOO_ROOT: ${{ secrets.demo }}
