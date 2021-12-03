@@ -2,16 +2,16 @@ name: Env tests
 on: push
 
 env:
-  FOO_ROOT: {{ secrets.demo }}
+  FOO_ROOT: ${{ secrets.demo }}
 
 jobs:
   test:
     runs-on: ubuntu-latest
     env:
-      FOO_ROOT: {{ secrets.demo }}
+      FOO_ROOT: ${{ secrets.demo }}
     steps:
       - uses: actions/checkout@v1
       - name: Test envs
         run: ./env-test.sh
         env:
-          FOO_ROOT: {{ secrets.demo }}
+          FOO_ROOT: ${{ secrets.demo }}
