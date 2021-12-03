@@ -13,7 +13,10 @@ jobs:
       - uses: actions/checkout@v1
       - name: Test envs
         run: |
+             ls
+             pwd
              cd ..
+             pwd
              ./env-test.sh
         env:
           FOO_ROOT: ${{ secrets.demo }}
